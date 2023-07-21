@@ -3,7 +3,7 @@ import type {
   ExcalidrawProps,
   ExcalidrawImperativeAPI,
 } from '@excalidraw/excalidraw/types/types';
-import { FC, useCallback, useEffect, useMemo, useState } from 'react';
+import { FC, useEffect, useMemo, useState } from 'react';
 import styled from 'styled-components';
 
 export type WindowRect = {
@@ -46,17 +46,17 @@ export const ExcalidrawContainer: FC<ExcalidrawContainerProps> = (props) => {
     height: window.innerHeight,
   });
 
-  const onResize = useCallback(() => {
+  const onResize = () => {
     setWindowRect({
       width: window.innerWidth,
       height: window.innerHeight,
     });
-  }, []);
+  };
 
   useEffect(() => {
     window.addEventListener('resize', onResize);
     return () => window.removeEventListener('resize', onResize);
-  }, [onResize]);
+  }, []);
 
   return (
     <ExcalidrawBox $scale={scale} $windowRect={windowRect}>

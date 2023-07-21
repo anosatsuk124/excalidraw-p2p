@@ -21,7 +21,7 @@ const RightTopUI: FC<RightTopUIProps> = (props) => {
   const sidebarToggle = useCallback(
     (variant: SidebarVariant) => {
       if (excalidrawAPI && !props.toggleState) {
-        props.setToggleState(props.toggleState);
+        props.setToggleState(true);
         props.setSidebarVariant(variant);
         excalidrawAPI.toggleMenu('customSidebar');
       }

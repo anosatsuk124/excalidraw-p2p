@@ -13,10 +13,7 @@ export const ExcalidrawMain = () => {
 
   const [toggleState, setToggleState] = useState<boolean>(false);
 
-  const onClose = useCallback(
-    () => setToggleState(!toggleState),
-    [toggleState]
-  );
+  const onClose = useCallback(() => setToggleState(false), []);
 
   return (
     <ExcalidrawContainer
