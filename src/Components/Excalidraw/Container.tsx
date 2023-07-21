@@ -60,7 +60,9 @@ export const ExcalidrawContainer: FC<ExcalidrawContainerProps> = (props) => {
 
   return (
     <ExcalidrawBox $scale={scale} $windowRect={windowRect}>
-      <Excalidraw {...props} ref={props.refCallback} />
+      <Excalidraw {...props} ref={props.refCallback}>
+        {props.children}
+      </Excalidraw>
     </ExcalidrawBox>
   );
 };

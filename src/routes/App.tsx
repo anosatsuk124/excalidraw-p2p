@@ -1,5 +1,5 @@
-import styled from 'styled-components';
 import ExcalidrawMain from '@/Components/Excalidraw';
+import styled from 'styled-components';
 
 export const Main = styled.div`
   overflow: hidden;

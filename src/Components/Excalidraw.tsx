@@ -3,6 +3,7 @@ import ExcalidrawContainer from './Excalidraw/Container';
 import { useCallback, useState } from 'react';
 import Sidebar, { SidebarVariant } from './Excalidraw/Sidebar';
 import RightTopUI from './Excalidraw/RightTopUI';
+import MainMenu from './Excalidraw/MainMenu';
 
 export const ExcalidrawMain = () => {
   const [excalidrawAPI, setExcalidrawAPI] = useState<ExcalidrawImperativeAPI>();
@@ -33,7 +34,9 @@ export const ExcalidrawMain = () => {
       renderSidebar={() => {
         return <Sidebar variant={sidebarVariant} variantProps={{ onClose }} />;
       }}
-    />
+    >
+      <MainMenu />
+    </ExcalidrawContainer>
   );
 };
 

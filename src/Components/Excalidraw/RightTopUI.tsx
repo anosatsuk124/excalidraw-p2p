@@ -3,6 +3,7 @@ import { FC, useCallback } from 'react';
 import { ToggleButton, ToggleButtonGroup } from '@/Components/Utilities';
 import { SidebarVariant, SidebarVariantSchema } from './Sidebar';
 import { z } from 'zod';
+import { LiveCollaborationTrigger } from '@excalidraw/excalidraw';
 
 export const RightTopUIPropsScheme = z.object({
   setSidebarVariant: z.function().args(SidebarVariantSchema).returns(z.void()),
@@ -29,14 +30,25 @@ const RightTopUI: FC<RightTopUIProps> = (props) => {
   );
 
   return (
-    <ToggleButtonGroup
-      exclusive
-      onChange={(_, value: SidebarVariant) => sidebarToggle(value)}
-      disabled={props.toggleState}
-    >
-      <ToggleButton value="general">General</ToggleButton>
-      <ToggleButton value="collaboration">Collaboration</ToggleButton>
-    </ToggleButtonGroup>
+    <>
+      <LiveCollaborationTrigger
+        isCollaborating={false}
+        onSelect={() => console.log('nyya')}
+      />
+      <ToggleButtonGroup
+        exclusive
+        onChange={(_, value: SidebarVariant) => sidebarToggle(value)}
+        disabled={props.toggleState}
+        size="small"
+      >
+        <ToggleButton size="small" value="general">
+          General
+        </ToggleButton>
+        <ToggleButton size="small" value="collaboration">
+          Collaboration
+        </ToggleButton>
+      </ToggleButtonGroup>
+    </>
   );
 };
 
