@@ -56,6 +56,27 @@
     "installedFrom": "https://registry.npmjs.org/jotai/-/jotai-2.2.2.tgz"
   },
   {
+    "name": "just-diff",
+    "licenseType": "MIT",
+    "author": "Angus Croll",
+    "link": "git+https://github.com/angus-c/just.git",
+    "installedFrom": "https://registry.npmjs.org/just-diff/-/just-diff-6.0.2.tgz"
+  },
+  {
+    "name": "just-diff-apply",
+    "licenseType": "MIT",
+    "author": "Angus Croll",
+    "link": "git+https://github.com/angus-c/just.git",
+    "installedFrom": "https://registry.npmjs.org/just-diff-apply/-/just-diff-apply-5.5.0.tgz"
+  },
+  {
+    "name": "qrcode.react",
+    "licenseType": "ISC",
+    "author": "Paul O’Shannessy <paul@oshannessy.com>",
+    "link": "git+https://github.com/zpao/qrcode.react.git",
+    "installedFrom": "https://registry.npmjs.org/qrcode.react/-/qrcode.react-3.1.0.tgz"
+  },
+  {
     "name": "react",
     "licenseType": "MIT",
     "author": "n/a",

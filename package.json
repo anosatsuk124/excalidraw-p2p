@@ -18,6 +18,7 @@
   "scripts": {
     "dev": "vite",
     "pre-commit": "lint-staged",
+    "pre-build": "run-s pre-build:*",
     "pre-build:license-report": "node license-emit.js",
     "build": "run-s pre-build build:*",
     "build:vite": "tsc && vite build",
@@ -35,6 +36,9 @@
     "dexie": "^3.2.4",
     "dexie-react-hooks": "^1.1.6",
     "jotai": "^2.2.2",
+    "just-diff": "^6.0.2",
+    "just-diff-apply": "^5.5.0",
+    "qrcode.react": "^3.1.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.14.2",
