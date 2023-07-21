@@ -1,0 +1,198 @@
+[
+  {
+    "name": "@excalidraw/excalidraw",
+    "licenseType": "MIT",
+    "author": "n/a",
+    "link": "https://github.com/excalidraw/excalidraw",
+    "installedFrom": "https://registry.npmjs.org/@excalidraw/excalidraw/-/excalidraw-0.15.2.tgz"
+  },
+  {
+    "name": "@fontsource/roboto",
+    "licenseType": "Apache-2.0",
+    "author": "Google Inc.",
+    "link": "git+https://github.com/fontsource/font-files.git",
+    "installedFrom": "https://registry.npmjs.org/@fontsource/roboto/-/roboto-5.0.5.tgz"
+  },
+  {
+    "name": "@mui/icons-material",
+    "licenseType": "MIT",
+    "author": "MUI Team",
+    "link": "git+https://github.com/mui/material-ui.git",
+    "installedFrom": "https://registry.npmjs.org/@mui/icons-material/-/icons-material-5.14.1.tgz"
+  },
+  {
+    "name": "@mui/material",
+    "licenseType": "MIT",
+    "author": "MUI Team",
+    "link": "git+https://github.com/mui/material-ui.git",
+    "installedFrom": "https://registry.npmjs.org/@mui/material/-/material-5.14.1.tgz"
+  },
+  {
+    "name": "@mui/styled-engine-sc",
+    "licenseType": "MIT",
+    "author": "MUI Team",
+    "link": "git+https://github.com/mui/material-ui.git",
+    "installedFrom": "https://registry.npmjs.org/@mui/styled-engine-sc/-/styled-engine-sc-5.12.0.tgz"
+  },
+  {
+    "name": "jotai",
+    "licenseType": "MIT",
+    "author": "Daishi Kato",
+    "link": "git+https://github.com/pmndrs/jotai.git",
+    "installedFrom": "https://registry.npmjs.org/jotai/-/jotai-2.2.2.tgz"
+  },
+  {
+    "name": "react",
+    "licenseType": "MIT",
+    "author": "n/a",
+    "link": "git+https://github.com/facebook/react.git",
+    "installedFrom": "https://registry.npmjs.org/react/-/react-18.2.0.tgz"
+  },
+  {
+    "name": "react-dom",
+    "licenseType": "MIT",
+    "author": "n/a",
+    "link": "git+https://github.com/facebook/react.git",
+    "installedFrom": "https://registry.npmjs.org/react-dom/-/react-dom-18.2.0.tgz"
+  },
+  {
+    "name": "styled-components",
+    "licenseType": "MIT",
+    "author": "Glen Maddern",
+    "link": "git+https://github.com/styled-components/styled-components.git",
+    "installedFrom": "https://registry.npmjs.org/styled-components/-/styled-components-6.0.4.tgz"
+  },
+  {
+    "name": "ts-pattern",
+    "licenseType": "MIT",
+    "author": "Gabriel Vergnaud",
+    "link": "git+ssh://git@github.com/gvergnaud/ts-pattern.git",
+    "installedFrom": "https://registry.npmjs.org/ts-pattern/-/ts-pattern-5.0.4.tgz"
+  },
+  {
+    "name": "zod",
+    "licenseType": "MIT",
+    "author": "Colin McDonnell <colin@colinhacks.com>",
+    "link": "git+https://github.com/colinhacks/zod.git",
+    "installedFrom": "https://registry.npmjs.org/zod/-/zod-3.21.4.tgz"
+  },
+  {
+    "name": "@types/react",
+    "licenseType": "MIT",
+    "author": "n/a",
+    "link": "https://github.com/DefinitelyTyped/DefinitelyTyped.git",
+    "installedFrom": "https://registry.npmjs.org/@types/react/-/react-18.2.14.tgz"
+  },
+  {
+    "name": "@types/react-dom",
+    "licenseType": "MIT",
+    "author": "n/a",
+    "link": "https://github.com/DefinitelyTyped/DefinitelyTyped.git",
+    "installedFrom": "https://registry.npmjs.org/@types/react-dom/-/react-dom-18.2.6.tgz"
+  },
+  {
+    "name": "@typescript-eslint/eslint-plugin",
+    "licenseType": "MIT",
+    "author": "n/a",
+    "link": "git+https://github.com/typescript-eslint/typescript-eslint.git",
+    "installedFrom": "https://registry.npmjs.org/@typescript-eslint/eslint-plugin/-/eslint-plugin-5.61.0.tgz"
+  },
+  {
+    "name": "@typescript-eslint/parser",
+    "licenseType": "BSD-2-Clause",
+    "author": "n/a",
+    "link": "git+https://github.com/typescript-eslint/typescript-eslint.git",
+    "installedFrom": "https://registry.npmjs.org/@typescript-eslint/parser/-/parser-5.61.0.tgz"
+  },
+  {
+    "name": "@vitejs/plugin-react-swc",
+    "licenseType": "MIT",
+    "author": "Arnaud Barré (https://github.com/ArnaudBarre)",
+    "link": "git+https://github.com/vitejs/vite-plugin-react-swc.git",
+    "installedFrom": "https://registry.npmjs.org/@vitejs/plugin-react-swc/-/plugin-react-swc-3.3.2.tgz"
+  },
+  {
+    "name": "eslint",
+    "licenseType": "MIT",
+    "author": "Nicholas C. Zakas <nicholas+npm@nczconsulting.com>",
+    "link": "git+https://github.com/eslint/eslint.git",
+    "installedFrom": "https://registry.npmjs.org/eslint/-/eslint-8.44.0.tgz"
+  },
+  {
+    "name": "eslint-plugin-react-hooks",
+    "licenseType": "MIT",
+    "author": "n/a",
+    "link": "git+https://github.com/facebook/react.git",
+    "installedFrom": "https://registry.npmjs.org/eslint-plugin-react-hooks/-/eslint-plugin-react-hooks-4.6.0.tgz"
+  },
+  {
+    "name": "eslint-plugin-react-refresh",
+    "licenseType": "MIT",
+    "author": "Arnaud Barré (https://github.com/ArnaudBarre)",
+    "link": "git+https://github.com/ArnaudBarre/eslint-plugin-react-refresh.git",
+    "installedFrom": "https://registry.npmjs.org/eslint-plugin-react-refresh/-/eslint-plugin-react-refresh-0.4.1.tgz"
+  },
+  {
+    "name": "fs-extra",
+    "licenseType": "MIT",
+    "author": "JP Richardson <jprichardson@gmail.com>",
+    "link": "git+https://github.com/jprichardson/node-fs-extra.git",
+    "installedFrom": "https://registry.npmjs.org/fs-extra/-/fs-extra-11.1.1.tgz"
+  },
+  {
+    "name": "husky",
+    "licenseType": "MIT",
+    "author": "Typicode <typicode@gmail.com>",
+    "link": "git+https://github.com/typicode/husky.git",
+    "installedFrom": "https://registry.npmjs.org/husky/-/husky-8.0.0.tgz"
+  },
+  {
+    "name": "license-report",
+    "licenseType": "MIT",
+    "author": "Yaniv Kessler",
+    "link": "git+https://github.com/ironSource/license-report.git",
+    "installedFrom": "https://registry.npmjs.org/license-report/-/license-report-6.4.0.tgz"
+  },
+  {
+    "name": "lint-staged",
+    "licenseType": "MIT",
+    "author": "Andrey Okonetchnikov <andrey@okonet.ru>",
+    "link": "git+https://github.com/okonet/lint-staged.git",
+    "installedFrom": "https://registry.npmjs.org/lint-staged/-/lint-staged-13.2.3.tgz"
+  },
+  {
+    "name": "npm-run-all",
+    "licenseType": "MIT",
+    "author": "Toru Nagashima",
+    "link": "git+https://github.com/mysticatea/npm-run-all.git",
+    "installedFrom": "https://registry.npmjs.org/npm-run-all/-/npm-run-all-4.1.5.tgz"
+  },
+  {
+    "name": "prettier",
+    "licenseType": "MIT",
+    "author": "James Long",
+    "link": "git+https://github.com/prettier/prettier.git",
+    "installedFrom": "https://registry.npmjs.org/prettier/-/prettier-3.0.0.tgz"
+  },
+  {
+    "name": "typescript",
+    "licenseType": "Apache-2.0",
+    "author": "Microsoft Corp.",
+    "link": "git+https://github.com/Microsoft/TypeScript.git",
+    "installedFrom": "https://registry.npmjs.org/typescript/-/typescript-5.0.2.tgz"
+  },
+  {
+    "name": "vite",
+    "licenseType": "MIT",
+    "author": "Evan You",
+    "link": "git+https://github.com/vitejs/vite.git",
+    "installedFrom": "https://registry.npmjs.org/vite/-/vite-4.4.0.tgz"
+  },
+  {
+    "name": "vite-tsconfig-paths",
+    "licenseType": "MIT",
+    "author": "aleclarson",
+    "link": "git+https://github.com/aleclarson/vite-tsconfig-paths.git",
+    "installedFrom": "https://registry.npmjs.org/vite-tsconfig-paths/-/vite-tsconfig-paths-4.2.0.tgz"
+  }
+]
