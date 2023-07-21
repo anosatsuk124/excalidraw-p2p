@@ -5,13 +5,13 @@ import { SidebarVariant, SidebarVariantSchema } from './Sidebar';
 import { z } from 'zod';
 import { LiveCollaborationTrigger } from '@excalidraw/excalidraw';
 
-export const RightTopUIPropsScheme = z.object({
+export const RightTopUIPropsSchema = z.object({
   setSidebarVariant: z.function().args(SidebarVariantSchema).returns(z.void()),
   setToggleState: z.function().args(z.boolean()).returns(z.void()),
   toggleState: z.boolean(),
 });
 
-export type RightTopUIProps = z.infer<typeof RightTopUIPropsScheme> & {
+export type RightTopUIProps = z.infer<typeof RightTopUIPropsSchema> & {
   excalidrawAPI: ExcalidrawImperativeAPI;
 };
 
