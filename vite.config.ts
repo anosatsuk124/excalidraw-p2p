@@ -4,10 +4,9 @@ import tsconfigPaths from 'vite-tsconfig-paths';
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  resolve: {
-    alias: {
-      '@mui/styled-engine': '@mui/styled-engine-sc',
-    },
+  define: {
+    devlog: 'window.devlog',
+    'process.env': {},
   },
   optimizeDeps: {
     include: [

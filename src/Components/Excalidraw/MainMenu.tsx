@@ -1,14 +1,13 @@
-import { MainMenuLink, MainMenuProvider } from '@/Components/Utilities';
 import { MainMenu as MainMenuBase } from '@excalidraw/excalidraw';
 
 const MainMenu = () => {
   return (
-    <MainMenuProvider>
+    <MainMenuBase>
       <MainMenuBase.DefaultItems.ToggleTheme />
       <MainMenuBase.DefaultItems.Export />
       <MainMenuBase.DefaultItems.SaveAsImage />
-      <MainMenuLink href="/license">License</MainMenuLink>
-    </MainMenuProvider>
+      <MainMenuBase.ItemLink href="/license">License</MainMenuBase.ItemLink>
+    </MainMenuBase>
   );
 };
 

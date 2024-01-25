@@ -1,16 +1,11 @@
-import { FC, useCallback, useEffect, useState } from 'react';
-import { Button, SidebarHeader } from '@/Components/Utilities';
+import { FC, useCallback, useEffect, useMemo, useState } from 'react';
+import { Sidebar } from '@excalidraw/excalidraw';
 import { z } from 'zod';
-import SidebarProviderBase, { SidebarBasePropsSchema } from './Base';
-import { startCollaboration } from '@/webrtc/collaboration';
-import {
-  SignalingData,
-  decodeSignalingData,
-  encodeSignalingData,
-} from '@/webrtc/utilities';
-import { Input, Link } from '@mui/material';
-import { fromUrl, toUrl } from '@/utilities/url';
+import SidebarBase, { SidebarBasePropsSchema } from './Base';
+import { Button, Input, Link } from '@mui/material';
 import { copyToClipboard } from '@/utilities/clipboard';
+import { useAtom } from 'jotai';
+import { PeerConfigurationAtom, PeerConnectionAtom } from '@/atoms/webrtc';
 
 export type CollaborationSidebarProps = z.infer<
   typeof CollaborationSidebarPropsSchema
@@ -21,14 +16,18 @@ export const CollaborationSidebarPropsSchema = z
   .merge(SidebarBasePropsSchema);
 
 const CollaborationSidebar: FC<CollaborationSidebarProps> = (props) => {
-  const signalingDataCallback = useCallback((data: SignalingData) => {
-    const encodedData = encodeSignalingData(data);
-    const url = toUrl({ signalingData: encodedData });
+  const [peerConnection, setPeerConnection] = useAtom(PeerConnectionAtom);
 
-    setCollaborationUrl(url);
+  const [peerConfiguration] = useAtom(PeerConfigurationAtom);
 
-    console.log(data);
-  }, []);
+  const initializePeerConnection = useCallback(() => {
+    if (peerConnection) {
+      devlog.warn('Peer connection already initialized');
+      return;
+    }
+
+    setPeerConnection(new RTCPeerConnection(peerConfiguration));
+  }, [peerConfiguration, peerConnection, setPeerConnection]);
 
   const [collaborationUrl, setCollaborationUrl] = useState<URL | null>(null);
   const [isCollaborationStarted, setIsCollaborationStarted] = useState(false);
@@ -36,58 +35,35 @@ const CollaborationSidebar: FC<CollaborationSidebarProps> = (props) => {
     useState<URL | null>(null);
 
   const onMessage = useCallback((event: MessageEvent) => {
-    console.log(event);
+    devlog.log(event);
   }, []);
 
-  const startCollaborationWrapper = useCallback(async () => {
-    console.log('start collaboration');
+  const copyCollaborationUrl = useCallback(
+    () => copyToClipboard(collaborationUrl?.toString(), undefined),
+    [collaborationUrl]
+  );
 
-    const signalingData = providedCollaborationUrl
-      ? decodeSignalingData(fromUrl(providedCollaborationUrl).signalingData!)
-      : undefined;
-
-    console.log(signalingData);
-
-    await startCollaboration(signalingData, signalingDataCallback, {
-      onMessage,
-    });
-  }, [signalingDataCallback, onMessage, providedCollaborationUrl]);
-
-  const copyCollaborationUrl = useCallback(async () => {
-    console.log('copy collaboration url');
-    console.log(collaborationUrl?.toString());
-    await copyToClipboard(collaborationUrl ? collaborationUrl?.toString() : '');
-  }, [collaborationUrl]);
-
-  useEffect(() => {
-    if (isCollaborationStarted || providedCollaborationUrl) {
-      startCollaborationWrapper().catch((error) => console.error(error));
+  // TODO: Check this !!
+  const offerWerapper = useCallback(async () => {
+    if (!peerConnection) {
+      devlog.error('Peer connection not initialized');
+      return;
     }
-  }, [
-    isCollaborationStarted,
-    startCollaborationWrapper,
-    providedCollaborationUrl,
-  ]);
+
+    const offer = await peerConnection.createOffer();
+    await peerConnection.setLocalDescription(offer);
+
+    devlog.log(offer);
+  }, []);
 
   return (
-    <SidebarProviderBase onClose={props.onClose}>
-      <SidebarHeader>Collaboration</SidebarHeader>
-      <Button onClick={() => setIsCollaborationStarted(true)}>
-        Start Collaboration
+    <SidebarBase onClose={props.onClose}>
+      <Sidebar.Header>Collaboration</Sidebar.Header>
+      <Button onClick={initializePeerConnection}>
+        Initialize a local peer.
       </Button>
-      <Link>{collaborationUrl?.toString()}</Link>
-      <Button
-        onClick={() => {
-          copyCollaborationUrl().catch((e) => console.error(e));
-        }}
-      >
-        Copy
-      </Button>
-      <Input
-        value={providedCollaborationUrl ?? ''}
-        onChange={(e) => setProvidedCollaborationUrl(new URL(e.target.value))}
-      ></Input>
-    </SidebarProviderBase>
+      <Button> Create a new collaboration session. (offer)</Button>
+    </SidebarBase>
   );
 };
 
